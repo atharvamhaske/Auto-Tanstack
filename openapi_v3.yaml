@@ -1,0 +1,126 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "backend",
+    "version": "1.0.0",
+    "license": {
+      "name": "ISC"
+    },
+    "description": "Specification JSONs: [v2](/api-spec/v2), [v3](/api-spec/v3)."
+  },
+  "paths": {
+    "/api/todos": {
+      "get": {
+        "summary": "/api/todos",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "number"
+                      },
+                      "title": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "title"
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "304": {
+            "description": ""
+          }
+        },
+        "tags": []
+      },
+      "post": {
+        "summary": "/api/todos",
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "number",
+                      "example": 1756484998767
+                    },
+                    "title": {
+                      "type": "string",
+                      "example": "Untitled"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": []
+      }
+    },
+    "/api/todos/{id}": {
+      "delete": {
+        "summary": "/api/todos/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "deletedId": {
+                      "type": "number",
+                      "example": 1
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "example": "Todo not found"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": []
+      }
+    }
+  },
+  "tags": []
+}

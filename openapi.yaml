@@ -1,0 +1,126 @@
+{
+  "definitions": {},
+  "info": {
+    "title": "backend",
+    "version": "1.0.0",
+    "license": {
+      "name": "ISC"
+    },
+    "description": "Specification JSONs: [v2](/api-spec/v2), [v3](/api-spec/v3)."
+  },
+  "paths": {
+    "/api/todos": {
+      "get": {
+        "summary": "/api/todos",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number"
+                  },
+                  "title": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id",
+                  "title"
+                ]
+              }
+            }
+          },
+          "304": {}
+        },
+        "tags": [],
+        "produces": [
+          "application/json"
+        ]
+      },
+      "post": {
+        "summary": "/api/todos",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number",
+                  "example": 1756484998767
+                },
+                "title": {
+                  "type": "string",
+                  "example": "Untitled"
+                }
+              }
+            }
+          }
+        },
+        "tags": [],
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/api/todos/{id}": {
+      "delete": {
+        "summary": "/api/todos/{id}",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "deletedId": {
+                  "type": "number",
+                  "example": 1
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string",
+                  "example": "Todo not found"
+                }
+              }
+            }
+          }
+        },
+        "tags": [],
+        "produces": [
+          "application/json"
+        ]
+      }
+    }
+  },
+  "swagger": "2.0",
+  "tags": []
+}
