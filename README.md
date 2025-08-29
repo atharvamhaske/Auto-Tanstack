@@ -1,3 +1,15 @@
+# my-orval-app
+
+## Screenshots
+
+[Frontend UI](public/frontend.png)
+
+![Frontend](public/frontend.png)
+
+[Swagger Docs](public/swagger.png)
+
+![Swagger](public/swagger.png)
+
 # Auto-TanstackQuery-hooks
 
 # TRULY OPEN SOURCE, CAN BE MODIFIED TO PERSONAL USE !!
@@ -83,6 +95,51 @@ export default {
 - Run Orval after spec changes.
 - Generated code lives in `src/api/`; do not edit it manually.
 
+## Project structure
+```text
+my-orval-app/
+  app/
+    layout.tsx
+    page.tsx
+    providers.tsx
+    globals.css
+  backend/
+    server.ts
+    package.json
+  public/
+    frontend.png
+    swagger.png
+  src/
+    api/
+      todoApi.ts
+      todoApi.schemas.ts
+  openapi.yaml
+  orval.config.ts
+  next.config.ts
+  README.md
+```
+
 ## Swagger/OpenAPI docs
 - With the backend running, open `http://localhost:4000/api-docs` to view interactive Swagger UI.
 - The spec (`openapi.yaml`) is generated/updated after endpoints are hit.
+
+## How `openapi.yaml` works (and how to regenerate everything)
+- The backend writes `openapi.yaml` automatically after you exercise endpoints at runtime.
+- If you delete `openapi.yaml` and `src/api/*`, you can fully regenerate:
+  1) Start backend and hit endpoints (via UI or script) so the generator rewrites `openapi.yaml`.
+  2) Regenerate client/hooks with Orval.
+
+### Commands
+```bash
+# Start backend (port 4000)
+cd backend && npm run dev
+
+# (In another terminal) Start frontend
+npm run dev
+
+# After hitting endpoints, (re)generate client/hooks
+npx orval --config orval.config.ts
+
+# Optional: watch mode
+npx orval --config orval.config.ts --watch
+```
