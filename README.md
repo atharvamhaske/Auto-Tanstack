@@ -3,11 +3,11 @@
 ## Screenshots DEMO
 
 
-
+[Frontend](public/frontend.png)
 ![Frontend](public/frontend.png)
 
 
-
+[Swagger](public/swagger.png)
 ![Swagger](public/swagger.png)
 
 
@@ -19,6 +19,31 @@
 - `express-oas-generator` observes API traffic and writes `openapi.yaml`
 - Orval generates a typed client + TanStack Query hooks from `openapi.yaml`
 - Next.js rewrites `/api/*` to the backend, so the frontend calls your backend without CORS
+
+
+## Project structure
+```text
+my-orval-app/
+  app/
+    layout.tsx
+    page.tsx
+    providers.tsx
+    globals.css
+  backend/
+    server.ts
+    package.json
+  public/
+    frontend.png
+    swagger.png
+  src/
+    api/
+      todoApi.ts
+      todoApi.schemas.ts
+  openapi.yaml
+  orval.config.ts
+  next.config.ts
+  README.md
+```
 
 ## Why use Orval-generated hooks (vs writing hooks manually)
 1. Strong types: request/response types come from the OpenAPI spec.
@@ -95,29 +120,7 @@ export default {
 - Run Orval after spec changes.
 - Generated code lives in `src/api/`; do not edit it manually.
 
-## Project structure
-```text
-my-orval-app/
-  app/
-    layout.tsx
-    page.tsx
-    providers.tsx
-    globals.css
-  backend/
-    server.ts
-    package.json
-  public/
-    frontend.png
-    swagger.png
-  src/
-    api/
-      todoApi.ts
-      todoApi.schemas.ts
-  openapi.yaml
-  orval.config.ts
-  next.config.ts
-  README.md
-```
+
 
 ## Swagger/OpenAPI docs
 - With the backend running, open `http://localhost:4000/api-docs` to view interactive Swagger UI.
