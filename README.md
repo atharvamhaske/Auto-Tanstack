@@ -1,12 +1,12 @@
 # Auto-TanstackQuery-Hooks
 
-## Screenshots
+## Screenshots DEMO
 
-[Frontend UI](public/frontend.png)
+
 
 ![Frontend](public/frontend.png)
 
-[Swagger Docs](public/swagger.png)
+
 
 ![Swagger](public/swagger.png)
 
