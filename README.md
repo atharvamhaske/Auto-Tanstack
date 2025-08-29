@@ -1,4 +1,4 @@
-# my-orval-app
+# Auto-TanstackQuery-hooks
 
 ## What this app is
 - Next.js frontend (App Router) + Express backend (TypeScript)
