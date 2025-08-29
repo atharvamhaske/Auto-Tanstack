@@ -24,26 +24,26 @@
 
 ## Project structure
 ```text
-my-orval-app/
-  app/
-    layout.tsx
-    page.tsx
-    providers.tsx
-    globals.css
-  backend/
-    server.ts
-    package.json
-  public/
-    frontend.png
-    swagger.png
-  src/
-    api/
-      todoApi.ts
-      todoApi.schemas.ts
-  openapi.yaml
-  orval.config.ts
-  next.config.ts
-  README.md
+auto-tanstackquery-hook
+├── app
+│   ├── layout.tsx
+│   ├── page.tsx
+│   ├── providers.tsx
+│   └── globals.css
+├── backend
+│   ├── server.ts
+│   └── package.json
+├── public
+│   ├── frontend.png
+│   └── swagger.png
+├── src
+│   └── api
+│       ├── todoApi.ts
+│       └── todoApi.schemas.ts
+├── openapi.yaml
+├── orval.config.ts
+├── next.config.ts
+└── README.md
 ```
 
 ## Why use Orval-generated hooks (vs writing hooks manually)
