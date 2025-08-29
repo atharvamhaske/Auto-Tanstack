@@ -1,6 +1,8 @@
 # Auto-TanstackQuery-hooks
 
-## What this app is
+#TRULY OPEN SOURCE, CAN BE MODIFIED TO PERSONAL USE !!
+
+## What this app is ??
 - Next.js frontend (App Router) + Express backend (TypeScript)
 - `express-oas-generator` observes API traffic and writes `openapi.yaml`
 - Orval generates a typed client + TanStack Query hooks from `openapi.yaml`
