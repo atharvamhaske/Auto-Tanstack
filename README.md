@@ -1,4 +1,4 @@
-# my-orval-app
+# Auto-TanstackQuery-Hooks
 
 ## Screenshots
 
@@ -10,7 +10,7 @@
 
 ![Swagger](public/swagger.png)
 
-# Auto-TanstackQuery-hooks
+
 
 # TRULY OPEN SOURCE, CAN BE MODIFIED TO PERSONAL USE !!
 
