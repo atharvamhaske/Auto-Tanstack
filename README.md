@@ -1,6 +1,6 @@
 # Auto-TanstackQuery-hooks
 
-#TRULY OPEN SOURCE, CAN BE MODIFIED TO PERSONAL USE !!
+# TRULY OPEN SOURCE, CAN BE MODIFIED TO PERSONAL USE !!
 
 ## What this app is ??
 - Next.js frontend (App Router) + Express backend (TypeScript)
