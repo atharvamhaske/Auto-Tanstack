@@ -3,6 +3,8 @@
 # dependencies
 /node_modules
 node_modules/
+../node_modules
+A:\FAFO\my-orval-app\node_modules
 /.pnp
 .pnp.*
 .yarn/*
